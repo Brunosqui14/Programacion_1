@@ -13,10 +13,20 @@ console.log(`
     `)
 }
 function validar(){
-    const calificacion=parseInt(prompt("ingrese su nota pa"))
-    if(calificacion>=7){
+    const calificacion=parseInt(prompt("ingrese su nota pa"));
+    /*if(calificacion>=7){
         alert("ta aprodabo mi rey")
     } else {
         alert("Pa diciempre pa")
-    }
+    }*/
+    (calificacion>=7) ? alert("estas aprobado") : alert("desaprobado")
+}
+function calcular(){
+    const number = prompt('ingresa un numero: ');
+    const resultado = number*10
+    return resultado
+}
+function visualizar(){
+    const respuesta = calcular()
+    alert(respuesta)
 }
