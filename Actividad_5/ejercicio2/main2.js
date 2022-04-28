@@ -11,5 +11,5 @@ const mostrar = () => {
     const respuesta = calcular(grado1,grado2,grado3)
     document.getElementById("h1").textContent = respuesta
 }
-const boton = document.getElementById("Calcular")
+const boton = document.getElementById("calcular")
 boton.addEventListener("click",mostrar)
