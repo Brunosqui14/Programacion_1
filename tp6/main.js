@@ -19,6 +19,6 @@ function jaja(){
 lenguajes.push("go")
 lenguajes.shift()
 lenguajes.unshift("Kotlin")
-const indice = lenguajes.indexOf("java")
+const indice = lenguajes.indexOf("Java")
 lenguajes.splice(indice,2)
 console.log(lenguajes)
