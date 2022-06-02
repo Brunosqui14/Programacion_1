@@ -1,4 +1,5 @@
 export default class Trapecio{
+    
     constructor(d1,d2,d3){
         this.d1 = d1
         this.d2 = d2
@@ -6,8 +7,8 @@ export default class Trapecio{
     }
     
     mostrar_datos(){
-        const cal = parseInt(d1) + parseInt(d2)
-        const cal2 = (cal*d3)/2
-        document.getElementById("h1").textContent = cal2
+        const cal = parseInt(this.d1) + parseInt(this.d2)
+        const cal2 = (cal*this.d3)/2
+        return cal2
     }   
 }
