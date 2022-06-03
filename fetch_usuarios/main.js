@@ -8,4 +8,4 @@ const consumir_datos = async () => {
     });
     document.getElementById("list_usuar").innerHTML = items.join('')
 }
-consumir_datos()
+consumir_datos() 
