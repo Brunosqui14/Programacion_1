@@ -33,4 +33,4 @@ const obtener_productos = async (dato) =>{
     });
     document.getElementById("catalogo").innerHTML = columnas.join('')
 }
-
+ 
