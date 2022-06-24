@@ -12,7 +12,7 @@ console.log('forEach: '+filas)
 let forof =[]
 for (const numero of numeros) {
     if (numero>2 && numero<9) {
-        forof.push(numeros)
+        forof.push(numero)
     }
 }
 console.log('forof: '+forof)
