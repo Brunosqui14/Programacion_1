@@ -8,35 +8,32 @@
     <title>Document</title>
 </head>
 <body>
-       <nav class="navbar bg-light">
+      <nav class="navbar bg-light">
         <div class="container-fluid">
-          <a class="navbar-light" href="#">Navbar</a>
+          <a class="navbar-primary" href="#">Navbar</a>
         </div>
       </nav>
-
       <div class="container">
-
-
         <div class="mb-3">
-            <label for="">Descripcion</label>
-            <input type="text">
+          <label for="">Descripcion</label>
+          <input id="desc" type="text">
         </div>
         <div class="mb-3">
             <label for="">Precio de venta</label>
-            <input type="text">
+            <input id="precio" type="number">
         </div>
         <div>
-        <select name="select" id="select">
-            <label for="">Categorias</label>
-          <option value="0">Elija suategorias</option>
-          <option value="1">Heladera</option>
-          <option value="2">TV</option>
-          <option value="3">Goku</option>
-        </select>
+          <label for="">Categorias</label>
+          <select name="select" id="select">  
+            <option value="1">cocina</option>
+            <option value="2">Heladera</option>
+            <option value="3">TV</option>
+            <option value="4">Goku</option>
+          </select>
         </div>
-        <button type="submit">Guardar</button>
+        <button id="boton" type="submit">Guardar</button>
       </div>
-     
+
     <script src="main.js" type="module"></script>
 </body>
 </html>
