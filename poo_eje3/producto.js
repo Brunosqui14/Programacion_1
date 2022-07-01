@@ -23,9 +23,35 @@ export default class Producto{
             //guardar en el storage
             localStorage.setItem("Productos",JSON.stringify(lista_productos))
         }
-       
+        /*invoco nuevamente el metodo obtener_producto() para lograr reconstruir la tabla, y 
+        así reflejar los datos actualizados que provienen del locarstorage, espesificamente 
+        del item "Productos"
+        */
+       this.obtener_producto()
     }
     obtener_producto(){
+        /*recolectamos todos los productos alojados en el Item "Productos"
+        que estan en notacion JSON. Debemos convertirlo en una exprecion 
+        nativa de JavaScript (es decir, hacemos un JSON.parse())*/
+        let lista_productos = JSON.parse(localStorage.getItem("Productos"))
 
+        let filas = []
+        lista_productos.forEach((element,index) => {
+            let fila = `
+            <tr>
+                <td>${index+1}</td>
+                <td>${element.descripcion}</td>
+                <td>${element.precio_venta}</td>
+                <td>${element.select}</td>
+                <td>
+                    <button class="btn btn-danger btn-sm">
+                        <i class="fa fa-trash"></i>                    
+                    </button>
+                </td>
+            </tr>
+            `
+            filas.push(fila)
+        });
+        document.getElementById("tbody").innerHTML = filas.join('')
     }
 }
