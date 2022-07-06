@@ -44,7 +44,7 @@ export default class Producto{
                 <td>${element.precio_venta}</td>
                 <td>${element.select}</td>
                 <td>
-                    <button class="btn btn-danger btn-sm">
+                    <button onclick="almacenar_indice(${index})" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#mymodal">
                         <i class="fa fa-trash"></i>                    
                     </button>
                 </td>
@@ -53,5 +53,11 @@ export default class Producto{
             filas.push(fila)
         });
         document.getElementById("tbody").innerHTML = filas.join('')
+    }
+    eliminar_productos(indice){
+        let lista_productos = JSON.parse(localStorage.getItem("Productos"))
+        lista_productos.splice(indice,1)
+        localStorage.setItem("Productos", JSON.stringify(lista_productos))
+        this.obtener_producto()
     }
 }

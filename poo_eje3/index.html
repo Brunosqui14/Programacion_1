@@ -41,11 +41,11 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>number</th>
-                  <th>Descripcion</th>
+                  <th>Number</th>
+                  <th>Descripción</th>
                   <th>Precio de venta</th>
                   <th>Categoria</th>
-                  <th>acciones</th>
+                  <th>Acciones</th>
                 </tr>
               </thead>
               <tbody id="tbody">
@@ -55,7 +55,26 @@
           </div>
         </div>
       </div>
+      
+<div id="mymodal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Eliminación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>¿Seguro qué quieres borrar esta wea?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nonis</button>
+        <button id="btn_eliminar" type="button" class="btn btn-primary">chi</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <script src="main.js" type="module"></script>
+    <script src="auxiliar.js"></script>
 </body>
 </html>
