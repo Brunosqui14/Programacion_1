@@ -23,6 +23,17 @@ function eliminar() {
     let producto = new Producto()
     //haciendo uso de la instancia
     //invocamos al metodo eliminar_producto()s
-    producto.eliminar_productos()
+    producto.eliminar_productos(indice)
 }
 document.getElementById("btn_eliminar").addEventListener("click",eliminar)
+
+function actualizar(){
+    //acá creamos la instancia producto
+    let producto = new Producto()
+    /*
+        y a traves de la instancia accedemos o invocamos el metodo 
+        actualizar_producto() existente en el archivo producto.js
+    */
+    producto.actualizar_producto()
+}
+document.getElementById("boton2").addEventListener("click",actualizar)
