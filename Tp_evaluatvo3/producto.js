@@ -1,15 +1,17 @@
 export default class Producto{
-    constructor(d,p,s){
+    constructor(d,p,s,u){
         this.descripcion = d
         this.precio_venta = p
         this.select = s
+        this.url = u
     }
     //metodo
     guardar_producto(){
         let nuevo_producto = {
             descripcion: this.descripcion,
             precio_venta: this.precio_venta,
-            select: this.select    
+            select: this.select,
+            url: this.url    
         }
         if ("Productos" in localStorage) {
             //convertimos el JSON obtenido desde el storage en una exprecion nativa de javascript
@@ -39,11 +41,12 @@ export default class Producto{
         let filas = []
         lista_productos.forEach((element,index) => {
             let fila = `
-            <tr>
+            <tr class="table-success">
                 <td>${index+1}</td>
+                <td>${element.url}</td>
                 <td>${element.descripcion}</td>
-                <td>$${element.precio_venta}</td>
-                <td>${element.select}</td>
+                <td>${element.precio_venta}</td>
+                
                 <td>
                     <button onclick="almacenar_indice(${index})" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#mymodal">
                         <i class="fa fa-trash"></i>                    
@@ -67,6 +70,7 @@ export default class Producto{
     actualizar_producto(){
         let indice = localStorage.getItem("indice")
         let lista_productos = JSON.parse(localStorage.getItem("Productos"))
+        lista_productos[indice].url = document.getElementById("url").value
         lista_productos[indice].descripcion = document.getElementById("desc").value
         lista_productos[indice].precio_venta = document.getElementById("precio").value
         lista_productos[indice].select = document.getElementById("select").value
