@@ -1,9 +1,10 @@
 export default class Producto{
-    constructor(d,p,s,u){
+    constructor(d,p,s,u,de){
         this.descripcion = d
         this.precio_venta = p
         this.select = s
         this.url = u
+        this.detalle = de
     }
     //metodo
     guardar_producto(){
@@ -11,7 +12,8 @@ export default class Producto{
             descripcion: this.descripcion,
             precio_venta: this.precio_venta,
             select: this.select,
-            url: this.url    
+            url: this.url,
+            detalle: this.detalle    
         }
         if ("Productos" in localStorage) {
             //convertimos el JSON obtenido desde el storage en una exprecion nativa de javascript
@@ -43,10 +45,12 @@ export default class Producto{
             let fila = `
             <tr class="table-success">
                 <td>${index+1}</td>
-                <td>${element.url}</td>
-                <td>${element.descripcion}</td>
-                <td>${element.precio_venta}</td>
                 
+                <td><img height="40" width="40" src="${element.url}" class="img" alt="..."></td>
+                <td>${element.descripcion}</td>
+                <td>${element.detalle}</td>
+                <td>${element.select}</td>
+                <td>${element.precio_venta}</td>
                 <td>
                     <button onclick="almacenar_indice(${index})" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#mymodal">
                         <i class="fa fa-trash"></i>                    

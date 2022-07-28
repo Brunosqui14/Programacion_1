@@ -5,7 +5,8 @@ function guardar(){
     let precio_venta = document.getElementById("precio").value
     let select = document.getElementById("select").value
     let url = document.getElementById("url").value
-    let producto = new Producto(descripcion,precio_venta,select,url)
+    let detalle = document.getElementById("detalle").value
+    let producto = new Producto(descripcion,precio_venta,select,url,detalle)
     /*Invocamos(ejecutamos) al metodo guardar_producto(),
     perteneciente a la clase producto*/
     producto.guardar_producto()
@@ -13,7 +14,7 @@ function guardar(){
 document.getElementById("boton").addEventListener("click",guardar)
 
 function listar() {
-    let producto=new Producto()
+    let producto=new Producto() 
     producto.obtener_producto()
 }
 listar()

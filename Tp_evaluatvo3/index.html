@@ -7,48 +7,59 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="bootstrap.bundle.min.js"></script>
-    <title>Document</title>
+    <title>Restaurante</title>
 </head>
 <body class="p-3 mb-2 bg-danger">
       <nav class="navbar bg-success">
         <div class="container-fluid">
-          <a class="navbar-brand text-dark"  href="#">Mario Bros</a>
+          <img src="https://thumbs.dreamstime.com/b/logo-de-cocina-italiana-l%C3%ADnea-redonda-la-bandera-logotipo-lineal-redondo-sobre-fondo-blanco-pasos-161301683.jpg" width="50" height="40">
+          <a class="navbar-brand text-dark"  href="#">Comida italiana</a>
         </div>
       </nav>
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
             <form id="form_producto">
-                <div class="input-group mb-5">
+                <div class="input-group mb-5 p-3">
+                    <span class="input-group-text">Url de la imagen:</span>
+                    <input id="url" type="text" class="form-control">
+                </div>
+
+                <div class="input-group mb-5 p-3">
                     <span class="input-group-text">Descripcion:</span>
                     <input id="desc" type="text" class="form-control">
                 </div>
-                <div class="input-group mb-5">
-                    <span class="input-group-text">Precio de venta:</span>
-                    <span class="input-group-text">
-                        <select id="select">
-                            <option value="$">Dolar</option>
-                            <option value="€">Euro</option>
-                            <option value="¥">Yen</option>
-                        </select>
-                    </span>
-                    <input id="precio" type="text" class="form-control">
+
+                <div class="input-group mb-5 p-3">
+                    <span class="input-group-text">Detalles:</span>
+                    <input id="detalle" type="text" class="form-control">
                 </div>
-                <div class="input-group mb-5">
-                    <span class="input-group-text">Url de la imagen:</span>
-                    <input id="url" type="text" class="form-control">
+
+                <div class="input-group mb-5 p-3">
+                      <span class="input-group-text">Precio de venta:</span>
+                      <span class="input-group-text">
+                          <select id="select">
+                              <option value="	ARS">Peso arg</option>
+                              <option value="$">Dolar</option>
+                              <option value="€">Euro</option>
+                              <option value="¥">Yen</option>
+                          </select>
+                      </span>
+                    <input id="precio" type="number" class="form-control">
                 </div>
             </form>
             <button class="btn btn-dark" id="boton" type="submit">Guardar</button>
             <button style="display: none;" class="btn btn-primary" id="boton2">Actualizar</button>
           </div>
-          <div class="col-lg-8">
+          <div class="col-lg-8 p-3">
             <table class="table">
               <thead>
                 <tr class="table-dark">
                   <th>#</th>
                   <th>Imagen</th>
                   <th>Descripción</th>
+                  <th>Detalles</th>
+                  <th>moneda</th>
                   <th>Precio de venta</th>
                   <th>Acciones</th>
                 </tr>

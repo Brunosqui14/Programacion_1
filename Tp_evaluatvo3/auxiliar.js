@@ -8,6 +8,7 @@ function editar(index){
     document.getElementById("precio").value = lista_productos[index].precio_venta
     document.getElementById("select").value = lista_productos[index].select
     document.getElementById("url").value = lista_productos[index].url
+    document.getElementById("detalle").value = lista_productos[index].detalle
 
     localStorage.setItem("indice",index)
     //apagar el boton
